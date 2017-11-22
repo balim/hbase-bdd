@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uk.co.hadoopathome.hbasebdd.cucumber.TestRunner" tests="1" skipped="0" failures="1" errors="0" timestamp="2017-11-22T00:51:08" hostname="Mel-PC" time="0.0">
+  <properties/>
+  <testcase name="classMethod" classname="uk.co.hadoopathome.hbasebdd.cucumber.TestRunner" time="0.0">
+    <failure message="java.lang.UnsatisfiedLinkError: org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Ljava/lang/String;I)Z" type="java.lang.UnsatisfiedLinkError">java.lang.UnsatisfiedLinkError: org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Ljava/lang/String;I)Z
+	at org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Native Method)
+	at org.apache.hadoop.io.nativeio.NativeIO$Windows.access(NativeIO.java:570)
+	at org.apache.hadoop.fs.FileUtil.canWrite(FileUtil.java:996)
+	at org.apache.hadoop.hdfs.server.common.Storage$StorageDirectory.analyzeStorage(Storage.java:484)
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.recoverStorageDirs(FSImage.java:306)
+	at org.apache.hadoop.hdfs.server.namenode.FSImage.recoverTransitionRead(FSImage.java:202)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.loadFSImage(FSNamesystem.java:955)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.loadFromDisk(FSNamesystem.java:700)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.loadNamesystem(NameNode.java:529)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.initialize(NameNode.java:585)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.&lt;init&gt;(NameNode.java:751)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.&lt;init&gt;(NameNode.java:735)
+	at org.apache.hadoop.hdfs.server.namenode.NameNode.createNameNode(NameNode.java:1407)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.createNameNode(MiniDFSCluster.java:998)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.createNameNodesAndSetConf(MiniDFSCluster.java:869)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.initMiniDFSCluster(MiniDFSCluster.java:704)
+	at org.apache.hadoop.hdfs.MiniDFSCluster.&lt;init&gt;(MiniDFSCluster.java:642)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.startMiniDFSCluster(HBaseTestingUtility.java:625)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.startMiniCluster(HBaseTestingUtility.java:1022)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.startMiniCluster(HBaseTestingUtility.java:903)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.startMiniCluster(HBaseTestingUtility.java:897)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.startMiniCluster(HBaseTestingUtility.java:841)
+	at uk.co.hadoopathome.hbasebdd.hbase.HBaseTestServer.before(HBaseTestServer.java:16)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:46)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:105)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:56)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</failure>
+  </testcase>
+  <system-out><![CDATA[2017-11-21 19:51:05 INFO  HBaseCommonTestingUtility:1007 - Starting up minicluster with 1 master(s) and 1 regionserver(s) and 1 datanode(s)
+2017-11-21 19:51:05 INFO  HBaseCommonTestingUtility:487 - Created new mini-cluster data directory: C:\GIT\hbase-bdd\target\test-data\d3d95907-2180-4a19-a73a-a351df8ab269\dfscluster_b23076f9-b2da-4797-a5f4-f6e3986074f4, deleteOnExit=true
+2017-11-21 19:51:05 INFO  HBaseCommonTestingUtility:737 - Setting test.cache.data to C:/GIT/hbase-bdd/target/test-data/d3d95907-2180-4a19-a73a-a351df8ab269/cache_data in system properties and HBase conf
+2017-11-21 19:51:05 INFO  HBaseCommonTestingUtility:737 - Setting hadoop.tmp.dir to C:/GIT/hbase-bdd/target/test-data/d3d95907-2180-4a19-a73a-a351df8ab269/hadoop_tmp in system properties and HBase conf
+2017-11-21 19:51:05 INFO  HBaseCommonTestingUtility:737 - Setting hadoop.log.dir to C:/GIT/hbase-bdd/target/test-data/d3d95907-2180-4a19-a73a-a351df8ab269/hadoop_logs in system properties and HBase conf
+2017-11-21 19:51:05 INFO  HBaseCommonTestingUtility:737 - Setting mapreduce.cluster.local.dir to C:/GIT/hbase-bdd/target/test-data/d3d95907-2180-4a19-a73a-a351df8ab269/mapred_local in system properties and HBase conf
+2017-11-21 19:51:05 INFO  HBaseCommonTestingUtility:737 - Setting mapreduce.cluster.temp.dir to C:/GIT/hbase-bdd/target/test-data/d3d95907-2180-4a19-a73a-a351df8ab269/mapred_temp in system properties and HBase conf
+2017-11-21 19:51:05 INFO  HBaseCommonTestingUtility:728 - read short circuit is OFF
+2017-11-21 19:51:05 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-11-21 19:51:05 ERROR Shell:373 - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:257)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:234)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:749)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:734)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:607)
+	at org.apache.hadoop.fs.FileSystem$Cache$Key.<init>(FileSystem.java:2748)
+	at org.apache.hadoop.fs.FileSystem$Cache$Key.<init>(FileSystem.java:2740)
+	at org.apache.hadoop.fs.FileSystem$Cache.get(FileSystem.java:2606)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:368)
+	at org.apache.hadoop.fs.FileSystem.get(FileSystem.java:167)
+	at org.apache.hadoop.hbase.fs.HFileSystem.<init>(HFileSystem.java:80)
+	at org.apache.hadoop.hbase.fs.HFileSystem.get(HFileSystem.java:395)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.getTestFileSystem(HBaseTestingUtility.java:3124)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.getNewDataTestDirOnTestFS(HBaseTestingUtility.java:536)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.setupDataTestDirOnTestFS(HBaseTestingUtility.java:525)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.getDataTestDirOnTestFS(HBaseTestingUtility.java:498)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.getDataTestDirOnTestFS(HBaseTestingUtility.java:512)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.createDirsAndSetProperties(HBaseTestingUtility.java:689)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.startMiniDFSCluster(HBaseTestingUtility.java:615)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.startMiniCluster(HBaseTestingUtility.java:1022)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.startMiniCluster(HBaseTestingUtility.java:903)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.startMiniCluster(HBaseTestingUtility.java:897)
+	at org.apache.hadoop.hbase.HBaseTestingUtility.startMiniCluster(HBaseTestingUtility.java:841)
+	at uk.co.hadoopathome.hbasebdd.hbase.HBaseTestServer.before(HBaseTestServer.java:16)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:46)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:105)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:56)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:64)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.messaging.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.messaging.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.messaging.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:360)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Formatting using clusterid: testClusterID
+2017-11-21 19:51:06 INFO  FSNamesystem:739 - fsLock is fair:true
+2017-11-21 19:51:06 INFO  deprecation:1019 - hadoop.configured.node.mapping is deprecated. Instead, use net.topology.configured.node.mapping
+2017-11-21 19:51:06 INFO  DatanodeManager:229 - dfs.block.invalidate.limit=1000
+2017-11-21 19:51:06 INFO  DatanodeManager:235 - dfs.namenode.datanode.registration.ip-hostname-check=true
+2017-11-21 19:51:06 INFO  BlockManager:71 - dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2017-11-21 19:51:06 INFO  BlockManager:76 - The block deletion will start around 2017 Nov 21 19:51:06
+2017-11-21 19:51:06 INFO  GSet:354 - Computing capacity for map BlocksMap
+2017-11-21 19:51:06 INFO  GSet:355 - VM type       = 64-bit
+2017-11-21 19:51:06 INFO  GSet:356 - 2.0% max memory 3.6 GB = 72.8 MB
+2017-11-21 19:51:06 INFO  GSet:361 - capacity      = 2^23 = 8388608 entries
+2017-11-21 19:51:06 INFO  BlockManager:354 - dfs.block.access.token.enable=false
+2017-11-21 19:51:06 INFO  BlockManager:339 - defaultReplication         = 1
+2017-11-21 19:51:06 INFO  BlockManager:340 - maxReplication             = 512
+2017-11-21 19:51:06 INFO  BlockManager:341 - minReplication             = 1
+2017-11-21 19:51:06 INFO  BlockManager:342 - maxReplicationStreams      = 2
+2017-11-21 19:51:06 INFO  BlockManager:343 - shouldCheckForEnoughRacks  = false
+2017-11-21 19:51:06 INFO  BlockManager:344 - replicationRecheckInterval = 3000
+2017-11-21 19:51:06 INFO  BlockManager:345 - encryptDataTransfer        = false
+2017-11-21 19:51:06 INFO  BlockManager:346 - maxNumBlocksToLog          = 1000
+2017-11-21 19:51:06 INFO  FSNamesystem:758 - fsOwner             = Mel (auth:SIMPLE)
+2017-11-21 19:51:06 INFO  FSNamesystem:759 - supergroup          = supergroup
+2017-11-21 19:51:06 INFO  FSNamesystem:760 - isPermissionEnabled = true
+2017-11-21 19:51:06 INFO  FSNamesystem:771 - HA Enabled: false
+2017-11-21 19:51:06 INFO  FSNamesystem:808 - Append Enabled: true
+2017-11-21 19:51:06 INFO  GSet:354 - Computing capacity for map INodeMap
+2017-11-21 19:51:06 INFO  GSet:355 - VM type       = 64-bit
+2017-11-21 19:51:06 INFO  GSet:356 - 1.0% max memory 3.6 GB = 36.4 MB
+2017-11-21 19:51:06 INFO  GSet:361 - capacity      = 2^22 = 4194304 entries
+2017-11-21 19:51:06 INFO  NameNode:209 - Caching file names occuring more than 10 times
+2017-11-21 19:51:06 INFO  GSet:354 - Computing capacity for map cachedBlocks
+2017-11-21 19:51:06 INFO  GSet:355 - VM type       = 64-bit
+2017-11-21 19:51:06 INFO  GSet:356 - 0.25% max memory 3.6 GB = 9.1 MB
+2017-11-21 19:51:06 INFO  GSet:361 - capacity      = 2^20 = 1048576 entries
+2017-11-21 19:51:06 INFO  FSNamesystem:5095 - dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2017-11-21 19:51:06 INFO  FSNamesystem:5096 - dfs.namenode.safemode.min.datanodes = 0
+2017-11-21 19:51:06 INFO  FSNamesystem:5097 - dfs.namenode.safemode.extension     = 0
+2017-11-21 19:51:06 INFO  FSNamesystem:892 - Retry cache on namenode is enabled
+2017-11-21 19:51:06 INFO  FSNamesystem:900 - Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2017-11-21 19:51:06 INFO  GSet:354 - Computing capacity for map NameNodeRetryCache
+2017-11-21 19:51:06 INFO  GSet:355 - VM type       = 64-bit
+2017-11-21 19:51:06 INFO  GSet:356 - 0.029999999329447746% max memory 3.6 GB = 1.1 MB
+2017-11-21 19:51:06 INFO  GSet:361 - capacity      = 2^17 = 131072 entries
+2017-11-21 19:51:06 INFO  NNConf:62 - ACLs enabled? false
+2017-11-21 19:51:06 INFO  NNConf:66 - XAttrs enabled? true
+2017-11-21 19:51:06 INFO  NNConf:74 - Maximum size of an xattr: 16384
+2017-11-21 19:51:06 INFO  FSImage:145 - Allocated new BlockPoolId: BP-1908221989-192.168.1.65-1511311866902
+2017-11-21 19:51:07 INFO  Storage:550 - Storage directory C:\GIT\hbase-bdd\target\test-data\d3d95907-2180-4a19-a73a-a351df8ab269\dfscluster_b23076f9-b2da-4797-a5f4-f6e3986074f4\dfs\name1 has been successfully formatted.
+2017-11-21 19:51:07 INFO  Storage:550 - Storage directory C:\GIT\hbase-bdd\target\test-data\d3d95907-2180-4a19-a73a-a351df8ab269\dfscluster_b23076f9-b2da-4797-a5f4-f6e3986074f4\dfs\name2 has been successfully formatted.
+2017-11-21 19:51:07 INFO  NNStorageRetentionManager:203 - Going to retain 1 images with txid >= 0
+2017-11-21 19:51:07 INFO  NameNode:1342 - createNameNode []
+2017-11-21 19:51:07 WARN  MetricsConfig:124 - Cannot locate configuration: tried hadoop-metrics2-namenode.properties,hadoop-metrics2.properties
+2017-11-21 19:51:07 INFO  NameNode:342 - fs.defaultFS is hdfs://127.0.0.1:0
+2017-11-21 19:51:07 INFO  DFSUtil:1611 - Starting web server as: ${dfs.web.authentication.kerberos.principal}
+2017-11-21 19:51:07 INFO  DFSUtil:1622 - Starting Web-server for hdfs at: http://127.0.0.1:0
+2017-11-21 19:51:07 INFO  log:67 - Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-11-21 19:51:07 INFO  HttpRequestLog:80 - Http request log for http.requests.namenode is not defined
+2017-11-21 19:51:07 INFO  HttpServer2:698 - Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2017-11-21 19:51:07 INFO  HttpServer2:676 - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context hdfs
+2017-11-21 19:51:07 INFO  HttpServer2:683 - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2017-11-21 19:51:07 INFO  HttpServer2:683 - Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2017-11-21 19:51:07 INFO  HttpServer2:86 - Added filter 'org.apache.hadoop.hdfs.web.AuthFilter' (class=org.apache.hadoop.hdfs.web.AuthFilter)
+2017-11-21 19:51:07 INFO  HttpServer2:602 - addJerseyResourcePackage: packageName=org.apache.hadoop.hdfs.server.namenode.web.resources;org.apache.hadoop.hdfs.web.resources, pathSpec=/webhdfs/v1/*
+2017-11-21 19:51:07 INFO  HttpServer2:886 - Jetty bound to port 52588
+2017-11-21 19:51:07 INFO  log:67 - jetty-6.1.26
+2017-11-21 19:51:07 INFO  log:67 - Extract jar:file:/C:/Users/Mel/.gradle/caches/modules-2/files-2.1/org.apache.hadoop/hadoop-hdfs/2.5.1/a92466dec043867fc380a8a0d995a1d59ff02bf1/hadoop-hdfs-2.5.1-tests.jar!/webapps/hdfs to C:\Users\Mel\AppData\Local\Temp\Jetty_127_0_0_1_52588_hdfs____.v4bvfr\webapp
+2017-11-21 19:51:08 WARN  AuthenticationFilter:166 - 'signature.secret' configuration not set, using a random value as secret
+2017-11-21 19:51:08 INFO  log:67 - Started HttpServer2$SelectChannelConnectorWithSafeStartup@127.0.0.1:52588
+2017-11-21 19:51:08 INFO  FSNamesystem:739 - fsLock is fair:true
+2017-11-21 19:51:08 INFO  DatanodeManager:229 - dfs.block.invalidate.limit=1000
+2017-11-21 19:51:08 INFO  DatanodeManager:235 - dfs.namenode.datanode.registration.ip-hostname-check=true
+2017-11-21 19:51:08 INFO  BlockManager:71 - dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2017-11-21 19:51:08 INFO  BlockManager:76 - The block deletion will start around 2017 Nov 21 19:51:08
+2017-11-21 19:51:08 INFO  GSet:354 - Computing capacity for map BlocksMap
+2017-11-21 19:51:08 INFO  GSet:355 - VM type       = 64-bit
+2017-11-21 19:51:08 INFO  GSet:356 - 2.0% max memory 3.6 GB = 72.8 MB
+2017-11-21 19:51:08 INFO  GSet:361 - capacity      = 2^23 = 8388608 entries
+2017-11-21 19:51:08 INFO  BlockManager:354 - dfs.block.access.token.enable=false
+2017-11-21 19:51:08 INFO  BlockManager:339 - defaultReplication         = 1
+2017-11-21 19:51:08 INFO  BlockManager:340 - maxReplication             = 512
+2017-11-21 19:51:08 INFO  BlockManager:341 - minReplication             = 1
+2017-11-21 19:51:08 INFO  BlockManager:342 - maxReplicationStreams      = 2
+2017-11-21 19:51:08 INFO  BlockManager:343 - shouldCheckForEnoughRacks  = false
+2017-11-21 19:51:08 INFO  BlockManager:344 - replicationRecheckInterval = 3000
+2017-11-21 19:51:08 INFO  BlockManager:345 - encryptDataTransfer        = false
+2017-11-21 19:51:08 INFO  BlockManager:346 - maxNumBlocksToLog          = 1000
+2017-11-21 19:51:08 INFO  FSNamesystem:758 - fsOwner             = Mel (auth:SIMPLE)
+2017-11-21 19:51:08 INFO  FSNamesystem:759 - supergroup          = supergroup
+2017-11-21 19:51:08 INFO  FSNamesystem:760 - isPermissionEnabled = true
+2017-11-21 19:51:08 INFO  FSNamesystem:771 - HA Enabled: false
+2017-11-21 19:51:08 INFO  FSNamesystem:808 - Append Enabled: true
+2017-11-21 19:51:08 INFO  GSet:354 - Computing capacity for map INodeMap
+2017-11-21 19:51:08 INFO  GSet:355 - VM type       = 64-bit
+2017-11-21 19:51:08 INFO  GSet:356 - 1.0% max memory 3.6 GB = 36.4 MB
+2017-11-21 19:51:08 INFO  GSet:361 - capacity      = 2^22 = 4194304 entries
+2017-11-21 19:51:08 INFO  NameNode:209 - Caching file names occuring more than 10 times
+2017-11-21 19:51:08 INFO  GSet:354 - Computing capacity for map cachedBlocks
+2017-11-21 19:51:08 INFO  GSet:355 - VM type       = 64-bit
+2017-11-21 19:51:08 INFO  GSet:356 - 0.25% max memory 3.6 GB = 9.1 MB
+2017-11-21 19:51:08 INFO  GSet:361 - capacity      = 2^20 = 1048576 entries
+2017-11-21 19:51:08 INFO  FSNamesystem:5095 - dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2017-11-21 19:51:08 INFO  FSNamesystem:5096 - dfs.namenode.safemode.min.datanodes = 0
+2017-11-21 19:51:08 INFO  FSNamesystem:5097 - dfs.namenode.safemode.extension     = 0
+2017-11-21 19:51:08 INFO  FSNamesystem:892 - Retry cache on namenode is enabled
+2017-11-21 19:51:08 INFO  FSNamesystem:900 - Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2017-11-21 19:51:08 INFO  GSet:354 - Computing capacity for map NameNodeRetryCache
+2017-11-21 19:51:08 INFO  GSet:355 - VM type       = 64-bit
+2017-11-21 19:51:08 INFO  GSet:356 - 0.029999999329447746% max memory 3.6 GB = 1.1 MB
+2017-11-21 19:51:08 INFO  GSet:361 - capacity      = 2^17 = 131072 entries
+2017-11-21 19:51:08 INFO  NNConf:62 - ACLs enabled? false
+2017-11-21 19:51:08 INFO  NNConf:66 - XAttrs enabled? true
+2017-11-21 19:51:08 INFO  NNConf:74 - Maximum size of an xattr: 16384
+
+0 Scenarios
+0 Steps
+0m0.000s
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
